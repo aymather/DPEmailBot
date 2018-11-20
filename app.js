@@ -2,9 +2,12 @@
 const app = require('main_app');
 
 // Run appliction
-// Set Interval function should be set for every day or so, 
-// whatever you're looking for
+// Set Interval function set to every hour
+// 1000 ms * 60 seconds * 60 minutes
 
+// Entry Point
 setInterval(() => {
+
 	app();
-}, 5000);
+
+}, 1000*60*60);
