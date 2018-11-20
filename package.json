@@ -1,0 +1,20 @@
+{
+  "name": "js_scraper",
+  "version": "1.0.0",
+  "description": "scrape internet",
+  "main": "scrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.3.1",
+    "nodemailer": "^4.6.8",
+    "puppeteer": "^1.9.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
