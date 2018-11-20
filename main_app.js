@@ -12,7 +12,7 @@ module.exports = function main_app() {
 
 	    setTimeout(() => {
 	        scrape(url);
-	    }, index*2000);
+	    }, index*5000);
 
 	});
 }
