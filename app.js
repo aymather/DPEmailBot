@@ -1,5 +1,5 @@
 // Require main function
-const app = require('main_app');
+const app = require('./main_app');
 
 // Run appliction
 // Set Interval function set to every hour
@@ -8,6 +8,6 @@ const app = require('main_app');
 // Entry Point
 setInterval(() => {
 
-	app();
+app();
 
 }, 1000);
