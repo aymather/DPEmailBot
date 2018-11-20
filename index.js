@@ -6,10 +6,13 @@ urls = [
     'https://www.quora.com/profile/Drew-Reggie-1/answers/published'
 ];
 
-urls.forEach((url, index) => {
 
-    setTimeout(() => {
-        scrape(url);
-    }, index*2000);
+module.exports = function main_app() {
+	urls.forEach((url, index) => {
 
-});
+	    setTimeout(() => {
+	        scrape(url);
+	    }, index*2000);
+
+	});
+}
