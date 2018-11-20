@@ -2,7 +2,7 @@
 var nodemailer = require('nodemailer');
 
 // Create send mail function
-module.exports = function sendMail(who, subject_, html_){
+module.exports = function sendMail(who, subject_, html_, publishedOn, href, name){
 
     // Create transport service
     var transporter = nodemailer.createTransport({
@@ -18,7 +18,7 @@ module.exports = function sendMail(who, subject_, html_){
         from: 'aymather@gmail.com',
         to: who,
         subject: subject_,
-        html: html_
+        html: `<p>Dear ${name}</p><p>Congrats! One of your Quora answers has been republished by <a href="${href}">${publishedOn}</a></p><p>Keep Sharing!</p>`
     };
 
     // Actually send the mail using the transporter

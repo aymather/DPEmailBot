@@ -18,6 +18,8 @@ module.exports = function scrape(url){
 
         .then((info) => {
             if (info !== title){
+                const publishedOn = $('div .CredibilityFacts', html)[0].children[3].children[0].data;
+                const href = $('div .CredibilityFacts', html)[0].children[3].attribs.href;
                 obj[url].title = info;
                 console.log(info);
                 var content = JSON.stringify(obj,undefined,2);
@@ -26,7 +28,7 @@ module.exports = function scrape(url){
                 })
                 var subject = `Congrats ${obj[url].name}! You've been republished!`;
                 var html = 'Congrats!'
-                sendMail(obj[url].email, subject, html);
+                sendMail(obj[url].email, subject, html, publishedOn, href, obj[url].name);
             }
         })
         
