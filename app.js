@@ -8,7 +8,6 @@ const app = require('./main_app');
 // Entry Point
 setInterval(() => {
 
-	console.log('+')
 	app();
 
-}, 10000);
+}, 86400000);
