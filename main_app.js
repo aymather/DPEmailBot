@@ -1,10 +1,13 @@
 // Requires
 const scrape = require('./scrape.js');
+const fs = require('fs');
 
-urls = [
-    'https://www.quora.com/profile/Nicolas-Cole-1/answers/published',
-    'https://www.quora.com/profile/Drew-Reggie-1/answers/published'
-];
+// Read in keys
+var data = JSON.parse(fs.readFileSync('./scrapeData.json', 'utf8'));
+var urls = [];
+for(var key in data) {
+	urls.push(key);
+}
 
 module.exports = function main_app() {
 	urls.forEach((url, index) => {

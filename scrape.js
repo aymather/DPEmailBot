@@ -20,6 +20,8 @@ module.exports = function scrape(url){
             // Load with cheerio selector
             $ = cheerio.load(html);
 
+            console.log('load successful')
+
             // Get most current most recent title
             return info = $('span .ui_qtext_rendered_qtext')[0].children[0].data;
             
